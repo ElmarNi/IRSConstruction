@@ -1,0 +1,103 @@
+#slider {
+    position: relative;
+
+    .item {
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            color: white;
+            text-align: center;
+
+            h1 {
+                font-size: 110px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: relative;
+                    display: block;
+                    height: 2px;
+                    width: 120px;
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                    background: $mainColor;
+                }
+            }
+
+            h4 {
+                font-size: 25px;
+            }
+
+            h1,
+            h4 {
+                font-weight: bold;
+            }
+
+            a {
+                padding: 16px 40px;
+                font-size: 14px;
+                line-height: 24px;
+                background-color: $mainColor;
+                color: white;
+                margin-top: 80px;
+                display: inline-block;
+                transition: all .3s ease;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+    }
+
+    .owl-nav {
+        height: 0;
+
+        button {
+            position: absolute;
+            font-size: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            width: 100px;
+            height: 100px;
+            opacity: .6;
+            transition: all .3s ease;
+
+            span {
+                position: absolute;
+                left: 50%;
+                top: -35px;
+                transform: translateX(-50%);
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        button.owl-prev {
+            left: -200px;
+        }
+
+        button.owl-next {
+            right: -200px;
+        }
+    }
+    &:hover {
+        button.owl-prev {
+            left: 0;
+        }
+
+        button.owl-next {
+            right: 0;
+        }
+    }
+}

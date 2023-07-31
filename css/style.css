@@ -1,0 +1,168 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#topHeader {
+  background-color: #272727;
+  padding: 6px 0;
+  color: white;
+}
+#topHeader ul.info li {
+  margin: 0 12px;
+}
+#topHeader ul.info li a {
+  color: white;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+#topHeader ul.info li a i {
+  margin-right: 5px;
+  font-size: 20px;
+  color: #6e2fa1;
+}
+#topHeader ul.info li a:hover {
+  color: #c897f0;
+}
+#topHeader ul.social-icons li {
+  margin: 0 5px;
+}
+#topHeader ul.social-icons li a {
+  padding: 4px;
+  display: block;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+#topHeader ul.social-icons li a:hover {
+  color: #c897f0;
+}
+
+#large-screens {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 1%, rgba(0, 0, 0, 0) 100%);
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+#large-screens .menu li a {
+  display: block;
+  padding: 12px;
+  color: white;
+  transition: all 0.3s ease;
+}
+#large-screens .menu li a:hover {
+  color: #c897f0;
+}
+#large-screens .menu li a.active {
+  color: #c897f0;
+}
+
+#large-screens.active {
+  position: fixed;
+  top: 0;
+  background: #272727;
+  box-shadow: 0 2px 12px rgba(136, 136, 136, 0.1);
+  padding: 10px 0;
+}
+
+#slider {
+  position: relative;
+}
+#slider .item {
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#slider .item .content {
+  color: white;
+  text-align: center;
+}
+#slider .item .content h1 {
+  font-size: 110px;
+  position: relative;
+}
+#slider .item .content h1::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 120px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #6e2fa1;
+}
+#slider .item .content h4 {
+  font-size: 25px;
+}
+#slider .item .content h1,
+#slider .item .content h4 {
+  font-weight: bold;
+}
+#slider .item .content a {
+  padding: 16px 40px;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #6e2fa1;
+  color: white;
+  margin-top: 80px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+#slider .item .content a:hover {
+  background-color: black;
+}
+#slider .owl-nav {
+  height: 0;
+}
+#slider .owl-nav button {
+  position: absolute;
+  font-size: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  width: 100px;
+  height: 100px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+#slider .owl-nav button span {
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+}
+#slider .owl-nav button:hover {
+  opacity: 1;
+}
+#slider .owl-nav button.owl-prev {
+  left: -200px;
+}
+#slider .owl-nav button.owl-next {
+  right: -200px;
+}
+#slider:hover button.owl-prev {
+  left: 0;
+}
+#slider:hover button.owl-next {
+  right: 0;
+}
