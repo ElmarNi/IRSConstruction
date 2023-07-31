@@ -13,6 +13,25 @@ a {
   color: black;
 }
 
+.title {
+  margin-bottom: 40px;
+}
+.title h4 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+.title h4::before {
+  content: "";
+  display: block;
+  background-color: #6e2fa1;
+  height: 2px;
+  width: 63px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 #topHeader {
   background-color: #272727;
   padding: 6px 0;
@@ -82,6 +101,7 @@ a {
 
 #slider {
   position: relative;
+  overflow: hidden;
 }
 #slider .item {
   height: 800px;
@@ -91,6 +111,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 20px;
 }
 #slider .item .content {
   color: white;
@@ -160,9 +182,265 @@ a {
 #slider .owl-nav button.owl-next {
   right: -200px;
 }
+#slider .owl-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 70px;
+}
+#slider .owl-dots button {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(119, 119, 119, 0.8);
+  transition: all 0.3s ease;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+#slider .owl-dots button:hover {
+  background-color: white;
+}
+#slider .owl-dots button.active {
+  background-color: white;
+}
 #slider:hover button.owl-prev {
   left: 0;
 }
 #slider:hover button.owl-next {
   right: 0;
+}
+
+#services {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+#services .category .item {
+  margin-bottom: 30px;
+}
+#services .category .item .icon {
+  position: relative;
+  background-color: #6e2fa1;
+  height: 105px;
+  width: 105px;
+  border-radius: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+#services .category .item .icon img {
+  width: 45px;
+  height: 45px;
+  z-index: 2;
+}
+#services .category .item .icon::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
+  transition: 0.3s;
+  transform: translateX(-100%);
+  border-radius: 50%;
+  background: #272727;
+  z-index: 1;
+}
+#services .category .item .content {
+  width: calc(100% - 125px);
+  margin-left: 20px;
+}
+#services .category .item .content a {
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+#services .category .item .content p {
+  color: #888;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+#services .category .item:hover .icon::after {
+  transform: translateX(0);
+}
+#services .category .item:hover a {
+  color: #6e2fa1;
+}
+
+#projects-home .item {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+#projects-home .item .content {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: white;
+  padding: 15px;
+}
+#projects-home .item .content h2 {
+  font-weight: bold;
+  margin: 0;
+}
+#projects-home .item .content p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#projects-home .item .content a {
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+#projects-home .item .content a:hover {
+  color: #c897f0;
+  border-color: transparent;
+}
+#projects-home .item .image-wrapper img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects-home .item .image-wrapper .overlay {
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6117647059);
+  display: none;
+}
+#projects-home .item .front, #projects-home .item .back {
+  overflow: visible;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+#projects-home .item .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(0deg);
+}
+#projects-home .item .front img {
+  opacity: 0.4;
+}
+#projects-home .item .back {
+  transform: rotateY(180deg);
+}
+#projects-home .item .back img {
+  opacity: 0.05;
+}
+#projects-home .item:hover .front {
+  transform: rotateY(-180deg);
+}
+#projects-home .item:hover .back {
+  transform: rotateY(0deg);
+}
+
+@media (min-width: 1400px) {
+  #projects-home .item {
+    height: 264px;
+  }
+}
+@media (max-width: 1399.98px) {
+  #projects-home .item {
+    height: 225px;
+  }
+  #services .category .item .icon {
+    width: 85px;
+    height: 85px;
+  }
+  #services .category .item .content {
+    width: calc(100% - 105px);
+  }
+}
+@media (max-width: 1199.98px) {
+  #projects-home .item {
+    height: 248px;
+  }
+  #services .category .item .content a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  #projects-home .item {
+    height: 248px;
+  }
+  #projects-home .item .front {
+    transform: rotateY(-180deg);
+  }
+  #projects-home .item .back {
+    transform: rotateY(0deg);
+  }
+  #projects-home .item .back img {
+    opacity: 0.4;
+  }
+  #slider .item .content h1 {
+    font-size: 56px;
+  }
+  #slider .item {
+    height: 600px;
+  }
+  #services .category .item .icon {
+    width: 75px;
+    height: 75px;
+  }
+  #services .category .item .content {
+    width: calc(100% - 95px);
+  }
+  #services .category .item .icon img {
+    width: 32px;
+    height: 32px;
+  }
+  #services .category .item .content p {
+    font-size: 16px;
+  }
+  #services .category .item .content a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .title h4::before {
+    margin-bottom: 10px;
+  }
+  #slider .item .content h1 {
+    font-size: 30px;
+  }
+  #slider .item .content h4 {
+    font-size: 18px;
+  }
+  #slider .item {
+    height: 400px;
+  }
+  #services .category .item {
+    justify-content: center;
+  }
+  #services .category .item .content {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+  #services .category .item .content a {
+    font-size: 16px;
+  }
+  #services .category .item .content p {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  #services {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  #projects-home .item {
+    height: 280px;
+  }
 }

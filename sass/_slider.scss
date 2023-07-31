@@ -1,6 +1,6 @@
 #slider {
     position: relative;
-
+    overflow: hidden;
     .item {
         height: 800px;
         background-position: center;
@@ -9,7 +9,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        width: 100%;
+        padding: 20px;
         .content {
             color: white;
             text-align: center;
@@ -91,6 +92,28 @@
             right: -200px;
         }
     }
+
+    .owl-dots {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 70px;
+        button{
+            width: 14px;
+            height: 14px;
+            background-color: rgba(119, 119, 119, 0.8);
+            transition: all .3s ease;
+            border-radius: 100%;
+            margin: 0 10px;
+            &:hover {
+                background-color: white;
+            }
+        }
+        button.active {
+            background-color: white;
+        }
+    }
+
     &:hover {
         button.owl-prev {
             left: 0;

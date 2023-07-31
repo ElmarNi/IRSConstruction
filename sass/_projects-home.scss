@@ -1,0 +1,84 @@
+#projects-home {
+    .item {
+        cursor: pointer;
+        user-select: none;
+        overflow: hidden;
+        .content {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            color: white;
+            padding: 15px;
+
+            h2 {
+                font-weight: bold;
+                margin: 0;
+            }
+
+            p {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                border-bottom: 1px solid white;
+                color: white;
+                font-size: 14px;
+                transition: all .3s ease;
+
+                &:hover {
+                    color: $hoverMainColor;
+                    border-color: transparent;
+                }
+            }
+        }
+
+        .image-wrapper {
+            img {
+                width: 100%;
+                height: auto;
+                min-height: 100%;
+                object-fit: cover;
+            }
+            .overlay {
+                left: 0;
+                top: 0;
+                background-color: #0000009c;
+                display: none;
+            }
+        }
+        .front, .back {
+            overflow: visible;
+            transform-style: preserve-3d;
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+        }
+        .front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(0deg);
+            img{
+                opacity: .4;
+            }
+        }
+        .back {
+            transform: rotateY(180deg);
+            img{
+                opacity: .05;
+            }
+        }
+        &:hover {
+            .front {
+                transform: rotateY(-180deg);
+            }
+            .back {
+                transform: rotateY(0deg);
+            }
+        }
+    }
+}
