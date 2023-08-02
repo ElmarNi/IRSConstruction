@@ -39,21 +39,8 @@
             h4 {
                 font-weight: bold;
             }
-
-            a {
-                padding: 16px 40px;
-                font-size: 14px;
-                line-height: 24px;
-                background-color: $mainColor;
-                color: white;
-                margin-top: 80px;
-                display: inline-block;
-                transition: all .3s ease;
-                font-weight: bold;
-
-                &:hover {
-                    background-color: black;
-                }
+            a.default-btn {
+                margin-top: 80px
             }
         }
     }

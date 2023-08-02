@@ -3,7 +3,9 @@ $hoverMainColor: #c897f0;
 body{ 
     font-family: 'Montserrat', sans-serif;
 }
-
+body.active {
+    overflow: hidden;
+}
 ul {
     padding: 0;
     margin: 0;
@@ -17,8 +19,7 @@ a {
 
 .title{
     margin-bottom: 40px;
-    h4{
-        text-align: center;
+    h1{
         font-size: 25px;
         font-weight: bold;
         margin: 0;
@@ -34,11 +35,28 @@ a {
     }
 }
 
+a.default-btn {
+    padding: 16px 40px;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: $mainColor;
+    color: white;
+    display: inline-block;
+    transition: all .3s ease;
+    font-weight: bold;
+
+    &:hover {
+        background-color: black;
+    }
+}
+
 @import "_header";
 @import "_slider";
 @import "_services";
 @import "_about-home";
 @import "_projects-home";
+@import "_news-home";
+@import "_footer";
 
 @media (min-width: 1400px) {
     #projects-home .item {
@@ -65,6 +83,15 @@ a {
     }
     #services .category .item .content a{
         font-size: 20px;
+    }
+    footer .logo p {
+        font-size: 14px;
+    }
+    footer ul {
+        font-size: 14px;
+    }
+    footer .news p {
+        font-size: 12px;
     }
 }
 
@@ -104,6 +131,17 @@ a {
     #services .category .item .content a{
         font-size: 18px;
     }
+
+    #about-home .title {
+        margin-bottom: 30px;
+    }
+    
+    #about-home .content p {
+        margin-bottom: 20px;
+    }
+    #slider {
+        margin-top: 56px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -139,11 +177,63 @@ a {
         padding-top: 30px;
         padding-bottom: 0;
     }
+    
+    #about-home .content h4 {
+        font-size: 18px;
+    }
+    #news-home .item .content a.headline{
+        font-size: 16px;
+    }
+    #news-home .item .content .group a.time {
+        font-size: 12px;
+    }
+    #news-home .item .content p {
+        font-size: 14px;
+    }
+    a.default-btn {
+        padding: 10px 40px;
+        font-size: 12px;
+    }
+    #slider .owl-dots {
+        bottom: 30px;
+    }
 
+    #slider .owl-nav button {
+        width: 30px;
+    }
 }
 
 @media (max-width: 575.98px) {
     #projects-home .item {
         height: 280px;
     }
+
+    #about-home .content h4 {
+        font-size: 14px;
+    }
+
+    #about-home .content p {
+        font-size: 13px;
+    }
+
+    #about-home{
+        padding: 30px 0;
+    }
+
+    .title h1::before, #about-home .content h1::before {
+        margin-bottom: 20px;
+    }
+    .title {
+        margin-bottom: 30px;
+    }
+
+    #news-home {
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    
+    footer{
+        padding: 30px 0;
+    }
+
 }

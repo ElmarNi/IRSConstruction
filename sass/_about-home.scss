@@ -1,3 +1,25 @@
 #about-home {
-    
+    padding: 60px 0;
+    background-color: #f8f8f8;
+
+    .content {
+        h1 {
+            &::before {
+                margin: 0;
+                margin-bottom: 35px;
+            }
+        }
+
+        h4{
+            color: black;
+            font-size: 20px;
+        }
+
+        p {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #888;
+        }
+    }
+
 }

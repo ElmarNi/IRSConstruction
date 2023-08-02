@@ -18,8 +18,8 @@
 </head>
 
 <body>
-
-    <section id="topHeader" class="d-none d-lg-block">
+    <div class="overlay"></div>
+    <section id="top" class="d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-8">
@@ -88,6 +88,56 @@
         </div>
     </header>
 
+    <header id="small-screens" class="d-lg-none d-block">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <div class="logo">
+                        <img src="" alt="logo">
+                    </div>
+                </div>
+                <div class="col-4 text-end">
+                    <a href="#" class="open-menu">
+                        <i class="fa-solid fa-bars active"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="active">Ana səhifə</a>
+                </li>
+                <li>
+                    <a href="#">Haqqımızda</a>
+                </li>
+                <li>
+                    <a href="#">Xidmətlər</a>
+                </li>
+                <li>
+                    <a href="#">Xəbərlər</a>
+                </li>
+                <li>
+                    <a href="#">Əlaqə</a>
+                </li>
+            </ul>
+
+            <ul class="d-flex justify-content-center social-icons mt-4">
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </li>
+                <li class="me-0 pe-0">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <section id="slider">
         <div class="container-fluid p-0">
             <div class="row m-0">
@@ -97,7 +147,7 @@
                             <div class="content">
                                 <h1>Lorem ipsum</h1>
                                 <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
-                                <a href="#">Son layihələrə bax</a>
+                                <a href="#" class="default-btn">Son layihələrə bax</a>
                             </div>
                         </div>
                     </div>
@@ -129,78 +179,112 @@
     <section id="services">
         <div class="container">
             <div class="row title text-center">
-                    <div class="col-lg-12">
-                        <h4>XİDMƏTLƏRİMİZ</h4>
-                    </div>
+                <div class="col-lg-12">
+                    <h1>XİDMƏTLƏRİMİZ</h1>
                 </div>
-                <div class="row category">
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item d-flex flex-wrap flex-md-nowrap">
-                            <div class="icon">
-                                <img src="images/pencil-and-ruler.png" alt="">
-                            </div>
-                            <div class="content">
-                                <a href="#">LOREM</a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab necessitatibus temporibus</p>
-                            </div>
+            </div>
+            <div class="row category">
+                <div class="col-md-6 col-xl-4">
+                    <div class="item d-flex flex-wrap flex-md-nowrap">
+                        <div class="icon">
+                            <img src="images/pencil-and-ruler.png" alt="">
                         </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item d-flex flex-wrap flex-md-nowrap">
-                            <div class="icon">
-                                <img src="images/group.png" alt="">
-                            </div>
-                            <div class="content">
-                                <a href="#">LOREM</a>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab necessitatibus temporibus</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item d-flex flex-wrap flex-md-nowrap">
-                            <div class="icon">
-                                <img src="images/brickwall.png" alt="">
-                            </div>
-                            <div class="content">
-                                <a href="#">LOREM</a>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab necessitatibus temporibus</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item d-flex flex-wrap flex-md-nowrap">
-                            <div class="icon">
-                                <img src="images/office.png" alt="">
-                            </div>
-                            <div class="content">
-                                <a href="#">LOREM</a>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab necessitatibus temporibus</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item d-flex flex-wrap flex-md-nowrap">
-                            <div class="icon">
-                                <img src="images/house.png" alt="">
-                            </div>
-                            <div class="content">
-                                <a href="#">LOREM</a>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab necessitatibus temporibus</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item d-flex flex-wrap flex-md-nowrap">
-                            <div class="icon">
-                                <img src="images/pencil-and-ruler (1).png" alt="">
-                            </div>
-                            <div class="content">
-                                <a href="#">LOREM</a>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab necessitatibus temporibus</p>
-                            </div>
+                        <div class="content">
+                            <a href="#">LOREM</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab
+                                necessitatibus temporibus</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="item d-flex flex-wrap flex-md-nowrap">
+                        <div class="icon">
+                            <img src="images/group.png" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#">LOREM</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab
+                                necessitatibus temporibus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="item d-flex flex-wrap flex-md-nowrap">
+                        <div class="icon">
+                            <img src="images/brickwall.png" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#">LOREM</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab
+                                necessitatibus temporibus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="item d-flex flex-wrap flex-md-nowrap">
+                        <div class="icon">
+                            <img src="images/office.png" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#">LOREM</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab
+                                necessitatibus temporibus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="item d-flex flex-wrap flex-md-nowrap">
+                        <div class="icon">
+                            <img src="images/house.png" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#">LOREM</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab
+                                necessitatibus temporibus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="item d-flex flex-wrap flex-md-nowrap">
+                        <div class="icon">
+                            <img src="images/pencil-and-ruler (1).png" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#">LOREM</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam, iusto ab
+                                necessitatibus temporibus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="content">
+                        <div class="row title">
+                            <div class="col-lg-12">
+                                <h1>HAQQIMIZDA</h1>
+                            </div>
+                        </div>
+                        <h4 class="heading">OUR CONSTRUCTION COMPANY HAS BEEN FOUNDED 10 YEARS AGO, AT THE VERY PEAK OF THE
+                            BUILDING FRENZY IN THE US...</h4>
+                        <p>Since then we've built hundreds of commercial, government and private buildings and
+                            facilities. It may not sound like a lot, but if you estimate the manpower, working hours,
+                            materials, planning and correlating that were all involved in completing each separate
+                            project, then our productivity is immense!</p>
+                        <a href="#" class="default-btn">Daha ətraflı</a>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-6">
+                    <div class="img-container w-100 h-100 d-flex align-items-center justify-content-end">
+                        <img src="images/home-1-652x491.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -226,7 +310,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -252,7 +337,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -278,7 +364,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -304,7 +391,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -330,7 +418,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -356,7 +445,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -382,7 +472,8 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
@@ -408,11 +499,175 @@
                             </div>
                             <div class="content position-absolute w-100 text-center">
                                 <h2>Lorem</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet nobis pariatur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi sit eveniet
+                                    nobis pariatur. </p>
                                 <a href="#">HAMISINA BAX</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news-home">
+        <div class="container">
+            <div class="row title text-center">
+                <div class="col-lg-12">
+                    <h1>XƏBƏRLƏR</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="item">
+                        <div class="img-container">
+                            <a href="#">
+                                <img src="images/home-post-2-418x315.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="#" class="headline">FUTURE PROOFING HOSPITALS</a>
+                            <div class="group">
+                                <a href="#" class="time">Jan.20, 2016</a>
+                            </div>
+                            <p>By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety mechanisms, improve care, and…</p>
+                            <a href="#" class="default-btn">Daha ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="item">
+                        <div class="img-container">
+                           <a href="#">
+                            <img src="images/home-post-3-418x315 (1).jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="content">
+                            <a href="#" class="headline">FUTURE PROOFING HOSPITALS</a>
+                            <div class="group">
+                                <a href="#" class="time">Jan.20, 2016</a>
+                            </div>
+                            <p>By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety mechanisms, improve care, and…</p>
+                            <a href="#" class="default-btn">Daha ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 d-sm-none d-lg-block">
+                    <div class="item">
+                        <div class="img-container">
+                            <a href="#">
+                                <img src="images/home-post-4-418x315.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="#" class="headline">FUTURE PROOFING HOSPITALS</a>
+                            <div class="group">
+                                <a href="#" class="time">Jan.20, 2016</a>
+                            </div>
+                            <p>By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety mechanisms, improve care, and…</p>
+                            <a href="#" class="default-btn">Daha ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-sm-center justify-content-lg-start">
+                <div class="col-md-6 col-lg-10 col-xl-3 mb-5 mb-xl-0">
+                    <div class="logo">
+                        <img src="" alt="logo">
+                        <p>Construction's core values have been shaped over more than 10 years of delivering the finest construction services to our clients. They stood to the test of time and these principles remain our bedrock lynchpins. We never tried to cut on either quality, the pace of work or any other construction aspect. We stay true to our full promise of efficiency!</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 col-xl-3 mb-5 mb-lg-0">
+                    <h3>MENYU</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Ana səhifə</a>
+                        </li>
+                        <li>
+                            <a href="#">Haqqımızda</a>
+                        </li>
+                        <li>
+                            <a href="#">Xidmətlər</a>
+                        </li>
+                        <li>
+                            <a href="#">Xəbərlər</a>
+                        </li>
+                        <li>
+                            <a href="#">Əlaqə</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-5 col-xl-3 mb-5 mb-md-0">
+                    <h3>XƏBƏRLƏR</h3>
+                    <ul class="news">
+                        <li>
+                            <p>Jan.20, 2016</p>
+                            <a href="#">
+                                Construction's core values have been shaped over more than 10 years of
+                            </a>
+                        </li>
+                        <li>
+                            <p>Jan.20, 2016</p>
+                            <a href="#">
+                                Construction's core values have been shaped over more than 10 years of
+                            </a>
+                        </li>
+                        <li>
+                            <p>Jan.20, 2016</p>
+                            <a href="#">
+                                Construction's core values have been shaped over more than 10 years of
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <h3>ƏLAQƏ</h3>
+                    <ul class="contact">
+                        <li>
+                            <p>Ünvan: Azerbaijan, Baku Xetai m/s</p>
+                        </li>
+                        <li>
+                            <p>Əlaqə nömrəsi: <a href="#">+994777777777</a></p>
+                        </li>
+                        <li>
+                            <p>E-mail: <a href="#">info@test.com</a></p>
+                        </li>
+                        <li>
+                            <p>İş günləri: Həftəiçi 09:00 - 18:00</p>
+                        </li>
+                        <li>
+                            <ul class="d-flex social-icons">
+                                <li class="ms-0">
+                                    <a href="#" class="ps-0">
+                                        <i class="fa-brands fa-square-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="me-0 pe-0">
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section id="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-2 mb-md-0">
+                    Copyright ©️ 2023 «Irs Construction»
+                </div>
+                <div class="col-md-6 text-md-end">
+                    Saytın hazırlanması — <a href="https://www.egmedia.az/" target="_blank"><span class="orange">E</span><span class="purple">G</span>media</a>
                 </div>
             </div>
         </div>

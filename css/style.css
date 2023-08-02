@@ -2,6 +2,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -16,13 +20,12 @@ a {
 .title {
   margin-bottom: 40px;
 }
-.title h4 {
-  text-align: center;
+.title h1 {
   font-size: 25px;
   font-weight: bold;
   margin: 0;
 }
-.title h4::before {
+.title h1::before {
   content: "";
   display: block;
   background-color: #6e2fa1;
@@ -32,39 +35,54 @@ a {
   margin-bottom: 30px;
 }
 
-#topHeader {
+a.default-btn {
+  padding: 16px 40px;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #6e2fa1;
+  color: white;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+a.default-btn:hover {
+  background-color: black;
+}
+
+#top {
   background-color: #272727;
   padding: 6px 0;
   color: white;
 }
-#topHeader ul.info li {
+#top ul.info li {
   margin: 0 12px;
 }
-#topHeader ul.info li a {
+#top ul.info li a {
   color: white;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
 }
-#topHeader ul.info li a i {
+#top ul.info li a i {
   margin-right: 5px;
   font-size: 20px;
   color: #6e2fa1;
 }
-#topHeader ul.info li a:hover {
+#top ul.info li a:hover {
   color: #c897f0;
 }
-#topHeader ul.social-icons li {
+
+#top ul.social-icons li, #small-screens ul.social-icons li {
   margin: 0 5px;
 }
-#topHeader ul.social-icons li a {
+#top ul.social-icons li a, #small-screens ul.social-icons li a {
   padding: 4px;
   display: block;
   color: white;
   font-size: 20px;
   transition: all 0.3s ease;
 }
-#topHeader ul.social-icons li a:hover {
+#top ul.social-icons li a:hover, #small-screens ul.social-icons li a:hover {
   color: #c897f0;
 }
 
@@ -97,6 +115,78 @@ a {
   background: #272727;
   box-shadow: 0 2px 12px rgba(136, 136, 136, 0.1);
   padding: 10px 0;
+}
+
+#small-screens {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #272727;
+  padding: 10px 0;
+}
+#small-screens .open-menu {
+  color: white;
+  font-size: 24px;
+  position: relative;
+}
+#small-screens .open-menu i {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+#small-screens .open-menu i:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#small-screens .open-menu i.active {
+  visibility: visible;
+  opacity: 1;
+}
+#small-screens nav {
+  position: absolute;
+  top: 56px;
+  right: -300px;
+  height: calc(100vh - 56px);
+  background-color: #272727;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+#small-screens nav ul.menu li {
+  margin: 8px 0;
+}
+#small-screens nav ul.menu li a {
+  color: white;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  display: block;
+}
+#small-screens nav ul.menu li a:hover {
+  background-color: #6e2fa1;
+}
+#small-screens nav ul.menu li a.active {
+  background-color: #6e2fa1;
+}
+#small-screens nav.active {
+  right: 0;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 #slider {
@@ -139,19 +229,8 @@ a {
 #slider .item .content h4 {
   font-weight: bold;
 }
-#slider .item .content a {
-  padding: 16px 40px;
-  font-size: 14px;
-  line-height: 24px;
-  background-color: #6e2fa1;
-  color: white;
+#slider .item .content a.default-btn {
   margin-top: 80px;
-  display: inline-block;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-#slider .item .content a:hover {
-  background-color: black;
 }
 #slider .owl-nav {
   height: 0;
@@ -266,6 +345,24 @@ a {
   color: #6e2fa1;
 }
 
+#about-home {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+#about-home .content h1::before {
+  margin: 0;
+  margin-bottom: 35px;
+}
+#about-home .content h4 {
+  color: black;
+  font-size: 20px;
+}
+#about-home .content p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #888;
+}
+
 #projects-home .item {
   cursor: pointer;
   -webkit-user-select: none;
@@ -343,6 +440,157 @@ a {
   transform: rotateY(0deg);
 }
 
+#news-home {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+#news-home .item {
+  margin-bottom: 20px;
+}
+#news-home .item .img-container {
+  margin-bottom: 20px;
+}
+#news-home .item .img-container img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#news-home .item .content a.headline {
+  font-size: 18px;
+  color: black;
+  transition: all 0.3s ease;
+}
+#news-home .item .content a.headline:hover {
+  color: #6e2fa1;
+}
+#news-home .item .content .group a.time {
+  color: #6e2fa1;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-style: italic;
+}
+#news-home .item .content .group a.time:hover {
+  color: #888;
+}
+#news-home .item .content p {
+  font-size: 16px;
+  color: #888;
+  margin: 15px 0;
+}
+
+@media (max-width: 1199.98px) {
+  #news .content .item a.headline {
+    font-size: 20px;
+  }
+  #news .content .item p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991.98px) {
+  #news .content .content-container3 {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  #news .content .content-container2 {
+    margin: 30px 0 30px 0;
+  }
+}
+@media (max-width: 575.98px) {
+  #news .title h4 {
+    font-size: 21px;
+  }
+  #news .content .item a.headline {
+    font-size: 16px;
+  }
+  #news .content .item .group a.time {
+    font-size: 13px;
+  }
+  #news .content .item .group a.name {
+    font-size: 13px;
+  }
+  #news .content .item p {
+    font-size: 14px;
+  }
+}
+footer {
+  padding: 60px 0;
+  background-color: #333;
+  color: #888;
+}
+footer h3 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 0;
+}
+footer .logo p {
+  margin-bottom: 0;
+  margin-top: 28px;
+}
+footer ul {
+  margin-top: 22px;
+}
+footer ul li {
+  margin-top: 11px;
+}
+footer .menu a, footer .contact a {
+  color: #c897f0;
+  transition: all 0.3s ease;
+}
+footer .menu a:hover, footer .contact a:hover {
+  color: white;
+}
+footer .news p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+footer .news a {
+  color: white;
+  transition: all 0.3s ease;
+}
+footer .news a:hover {
+  color: #c897f0;
+}
+footer ul.social-icons li {
+  margin: 0 5px;
+}
+footer ul.social-icons li a {
+  padding: 4px;
+  display: block;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+footer ul.social-icons li a:hover {
+  color: #c897f0;
+}
+
+#bottom {
+  padding: 20px 0;
+  font-size: 14px;
+  background-color: #272727;
+  color: #888;
+}
+#bottom a {
+  display: inline-block;
+  transform: translateY(2px);
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
+}
+#bottom a .orange {
+  color: #f5874f;
+}
+#bottom a .purple {
+  color: #a53692;
+}
+#bottom a:hover {
+  transform: translateY(2px) scale(1.1);
+}
+
 @media (min-width: 1400px) {
   #projects-home .item {
     height: 264px;
@@ -366,6 +614,15 @@ a {
   }
   #services .category .item .content a {
     font-size: 20px;
+  }
+  footer .logo p {
+    font-size: 14px;
+  }
+  footer ul {
+    font-size: 14px;
+  }
+  footer .news p {
+    font-size: 12px;
   }
 }
 @media (max-width: 991.98px) {
@@ -404,6 +661,15 @@ a {
   #services .category .item .content a {
     font-size: 18px;
   }
+  #about-home .title {
+    margin-bottom: 30px;
+  }
+  #about-home .content p {
+    margin-bottom: 20px;
+  }
+  #slider {
+    margin-top: 56px;
+  }
 }
 @media (max-width: 767.98px) {
   .title h4::before {
@@ -438,9 +704,53 @@ a {
     padding-top: 30px;
     padding-bottom: 0;
   }
+  #about-home .content h4 {
+    font-size: 18px;
+  }
+  #news-home .item .content a.headline {
+    font-size: 16px;
+  }
+  #news-home .item .content .group a.time {
+    font-size: 12px;
+  }
+  #news-home .item .content p {
+    font-size: 14px;
+  }
+  a.default-btn {
+    padding: 10px 40px;
+    font-size: 12px;
+  }
+  #slider .owl-dots {
+    bottom: 30px;
+  }
+  #slider .owl-nav button {
+    width: 30px;
+  }
 }
 @media (max-width: 575.98px) {
   #projects-home .item {
     height: 280px;
+  }
+  #about-home .content h4 {
+    font-size: 14px;
+  }
+  #about-home .content p {
+    font-size: 13px;
+  }
+  #about-home {
+    padding: 30px 0;
+  }
+  .title h1::before, #about-home .content h1::before {
+    margin-bottom: 20px;
+  }
+  .title {
+    margin-bottom: 30px;
+  }
+  #news-home {
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+  footer {
+    padding: 30px 0;
   }
 }
